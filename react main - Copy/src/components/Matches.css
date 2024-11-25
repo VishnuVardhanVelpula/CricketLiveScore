@@ -1,0 +1,78 @@
+/* Matches.css */
+.matches-container {
+    padding: 30px; /* Increased padding for more space */
+    text-align: center;
+    background-color: #eef2f5; /* Light grey background for contrast */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+}
+
+h2 {
+    font-size: 2.5rem; /* Increased font size for emphasis */
+    margin-bottom: 40px; /* More space below the heading */
+    color: #34495e; /* Darker shade for better readability */
+    text-transform: uppercase; /* Formal appearance */
+    letter-spacing: 1px; /* Slightly increased letter spacing */
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px; /* Increased gap for better spacing between cards */
+}
+
+.match-card {
+    background-color: #ffffff; /* White background for cards */
+    border: 1px solid #bdc3c7; /* Soft border for a cleaner look */
+    border-radius: 12px; /* Rounded corners */
+    padding: 25px; /* More padding inside the cards */
+    width: 320px; /* Consistent width for cards */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Softer shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.match-card:hover {
+    transform: translateY(-4px); /* Subtle lift effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.match-card h3 {
+    font-size: 1.8rem; /* Larger heading */
+    margin-bottom: 15px; /* Space below heading */
+    color: #2980b9; /* Bright blue color for contrast */
+    font-weight: 600; /* Bold font weight */
+}
+
+.match-info p {
+    margin: 10px 0; /* More space around paragraphs */
+    font-size: 1rem; /* Standard font size */
+    color: #555; /* Grey color for text */
+}
+
+.match-info strong {
+    color: #2980b9; /* Highlight strong elements with blue */
+}
+
+.loading-message,
+.error-message,
+.no-matches-message {
+    font-size: 1.2rem; /* Standard font size for messages */
+    color: #666; /* Grey color for text */
+    margin-top: 20px; /* Space above messages */
+    font-style: italic; /* Italics for readability */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+        align-items: center; /* Center align cards */
+    }
+
+    .match-card {
+        width: 90%; /* Full width for mobile cards */
+        max-width: 400px; /* Maximum width for cards */
+    }
+}

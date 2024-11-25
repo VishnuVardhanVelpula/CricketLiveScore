@@ -1,0 +1,58 @@
+/* src/components/CountriesList.css */
+
+.countries-container {
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.countries-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between cards */
+    margin: 0; /* Reset default margins */
+    padding: 0; /* Reset default padding */
+    list-style: none; /* Remove bullet points */
+}
+
+.country-card {
+    background-color: #ffffff; /* White background for cards */
+    border: 1px solid #e0e0e0; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Padding inside cards */
+    width: 150px; /* Set a width suitable for the flags */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transitions */
+    position: relative; /* Position for absolute elements */
+}
+
+.country-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+.country-flag {
+    width: 100%; /* Make flags responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Slightly round the flag edges */
+}
+
+.country-name {
+    margin-top: 10px; /* Space between flag and name */
+    font-weight: 600; /* Bold for country name */
+    color: #34495e; /* Dark color for text */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .countries-list {
+        gap: 10px; /* Adjust spacing for smaller screens */
+    }
+
+    .country-card {
+        width: 120px; /* Smaller width for mobile */
+    }
+}

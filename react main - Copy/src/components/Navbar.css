@@ -1,0 +1,93 @@
+/* Navbar.css */
+
+nav {
+    background-color: #2c3e50; /* Darker navy blue for a modern look */
+    padding: 15px 30px; /* Increased horizontal padding for more spacious layout */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow for more depth */
+    border-radius: 8px; /* Rounded corners for a softer appearance */
+    position: relative; /* Relative positioning for pseudo-elements */
+    overflow: hidden; /* Prevents overflow of pseudo-elements */
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+}
+
+nav:hover {
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+nav::before {
+    content: ''; /* Creates a pseudo-element for a visual effect */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(243, 156, 18, 0.2), rgba(243, 156, 18, 0.1)); /* Gradient overlay */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for visibility */
+}
+
+nav:hover::before {
+    opacity: 1; /* Show overlay on hover */
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    gap: 40px; /* Increased spacing between items */
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    position: relative; /* Positioning for hover effect */
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600; /* Slightly bolder font weight */
+    font-size: 1rem;
+    padding: 10px 15px; /* Added padding for larger click area */
+    border-radius: 4px; /* Rounded corners on links */
+    display: flex; /* Flexbox for icon alignment */
+    align-items: center; /* Center icon and text vertically */
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for color changes */
+}
+
+a:hover {
+    text-decoration: none; /* Remove underline on hover */
+    color: #f39c12; /* Change text color on hover */
+    background-color: rgba(243, 156, 18, 0.3); /* Subtle background color on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover for emphasis */
+}
+
+a i {
+    margin-right: 8px; /* Space between icon and text */
+    transition: transform 0.3s ease; /* Smooth transition for icon scale */
+}
+
+a:hover i {
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+
+.page-content {
+    padding: 20px; /* Space between navbar and content */
+    margin-top: 20px; /* Consistent space between navbar and page content */
+    transition: margin-top 0.3s ease; /* Smooth transition for content margin */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    ul {
+        flex-direction: column; /* Stack links vertically on smaller screens */
+        gap: 15px; /* Reduced spacing between items */
+    }
+
+    a {
+        padding: 10px 20px; /* Adjusted padding for smaller screens */
+        font-size: 0.9rem; /* Slightly smaller font size */
+    }
+}
